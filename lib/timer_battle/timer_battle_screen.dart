@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:timer_battle_app/components/reset_button.dart';
+import 'package:timer_battle_app/components/start_button.dart';
+import 'package:timer_battle_app/components/stop_button.dart';
 
 class TimerBattleScreen extends StatelessWidget {
   const TimerBattleScreen ({Key? key}) : super(key: key);
@@ -15,66 +18,9 @@ class TimerBattleScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child: const RotationTransition(
-                      turns:  AlwaysStoppedAnimation(180 / 360),
-                      child: Text(
-                        'Start',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child: const RotationTransition(
-                      turns: AlwaysStoppedAnimation(180 / 360),
-                      child: Text(
-                        'Stop',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child: const RotationTransition(
-                      turns: AlwaysStoppedAnimation(180 / 360),
-                      child: Text(
-                        'Reset',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                StartButton(onTap: () {},),
+                ResetButton(onTap: () {},),
+                StopButton(onTap: () {},),
               ],
             ),
             RotationTransition(
