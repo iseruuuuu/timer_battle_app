@@ -70,17 +70,26 @@ class TimerBattleScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Start'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Start'),
+                  ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child:  const Text('Stop'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child:  const Text('Stop'),
+                  ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Reset'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Reset'),
+                  ),
                 ),
               ],
             ),
