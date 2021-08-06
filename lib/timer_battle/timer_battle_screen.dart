@@ -10,7 +10,7 @@ class TimerBattleScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
+          children: [
             const SizedBox(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
