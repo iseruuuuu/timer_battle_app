@@ -46,9 +46,18 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () {} , child: Text('')),
-                ElevatedButton(onPressed: () {} , child: Text('')),
-                ElevatedButton(onPressed: () {} , child: Text('')),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Start'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child:  const Text('Stop'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Reset'),
+                ),
               ],
             ),
             Text('00:00:00'),
@@ -56,18 +65,22 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () {} , child: Text('')),
-                ElevatedButton(onPressed: () {} , child: Text('')),
-                ElevatedButton(onPressed: () {} , child: Text('')),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Start'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child:  const Text('Stop'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Reset'),
+                ),
               ],
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
