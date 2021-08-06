@@ -25,7 +25,13 @@ class TimerBattleScreen extends StatelessWidget {
                     onPressed: () {},
                     child: const RotationTransition(
                       turns:  AlwaysStoppedAnimation(180 / 360),
-                      child: Text('Start'),
+                      child: Text(
+                        'Start',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -39,7 +45,13 @@ class TimerBattleScreen extends StatelessWidget {
                     onPressed: () {},
                     child: const RotationTransition(
                       turns: AlwaysStoppedAnimation(180 / 360),
-                      child: Text('Stop'),
+                      child: Text(
+                        'Stop',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -53,7 +65,13 @@ class TimerBattleScreen extends StatelessWidget {
                     onPressed: () {},
                     child: const RotationTransition(
                       turns: AlwaysStoppedAnimation(180 / 360),
-                      child: Text('Reset'),
+                      child: Text(
+                        'Reset',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -87,7 +105,13 @@ class TimerBattleScreen extends StatelessWidget {
                       primary: Colors.redAccent,
                     ),
                     onPressed: () {},
-                    child: const Text('Start'),
+                    child: const Text(
+                      'Start',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -98,7 +122,13 @@ class TimerBattleScreen extends StatelessWidget {
                       primary: Colors.redAccent,
                     ),
                     onPressed: () {},
-                    child:  const Text('Stop'),
+                    child:  const Text(
+                      'Stop',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -109,7 +139,13 @@ class TimerBattleScreen extends StatelessWidget {
                       primary: Colors.redAccent,
                     ),
                     onPressed: () {},
-                    child: const Text('Reset'),
+                    child: const Text(
+                      'Reset',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ),
               ],
