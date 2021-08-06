@@ -38,11 +38,14 @@ class TimerBattleScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-              '00:00:00',
-              style: TextStyle(
-                fontSize: size.width / 7,
-                color: Colors.black,
+            RotationTransition(
+              turns: const AlwaysStoppedAnimation(180 / 360),
+              child: Text(
+                '00:00:00',
+                style: TextStyle(
+                  fontSize: size.width / 7,
+                  color: Colors.black,
+                ),
               ),
             ),
             Text(
