@@ -17,6 +17,7 @@ class TimerBattleScreen extends StatelessWidget {
               children: [
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.redAccent,
@@ -30,6 +31,7 @@ class TimerBattleScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: const RotationTransition(
@@ -40,6 +42,7 @@ class TimerBattleScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: const RotationTransition(
@@ -72,6 +75,7 @@ class TimerBattleScreen extends StatelessWidget {
               children: [
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: const Text('Start'),
@@ -79,6 +83,7 @@ class TimerBattleScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     onPressed: () {},
                     child:  const Text('Stop'),
@@ -86,6 +91,7 @@ class TimerBattleScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: size.width / 4,
+                  height: size.width / 8,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: const Text('Reset'),
