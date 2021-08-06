@@ -33,6 +33,9 @@ class TimerBattleScreen extends StatelessWidget {
                   width: size.width / 4,
                   height: size.width / 8,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
                     onPressed: () {},
                     child: const RotationTransition(
                       turns: AlwaysStoppedAnimation(180 / 360),
@@ -44,6 +47,9 @@ class TimerBattleScreen extends StatelessWidget {
                   width: size.width / 4,
                   height: size.width / 8,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
                     onPressed: () {},
                     child: const RotationTransition(
                       turns: AlwaysStoppedAnimation(180 / 360),
@@ -77,6 +83,9 @@ class TimerBattleScreen extends StatelessWidget {
                   width: size.width / 4,
                   height: size.width / 8,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
                     onPressed: () {},
                     child: const Text('Start'),
                   ),
@@ -85,6 +94,9 @@ class TimerBattleScreen extends StatelessWidget {
                   width: size.width / 4,
                   height: size.width / 8,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
                     onPressed: () {},
                     child:  const Text('Stop'),
                   ),
@@ -93,6 +105,9 @@ class TimerBattleScreen extends StatelessWidget {
                   width: size.width / 4,
                   height: size.width / 8,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
                     onPressed: () {},
                     child: const Text('Reset'),
                   ),
