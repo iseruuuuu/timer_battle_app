@@ -62,7 +62,6 @@ class TimerBattleScreen extends StatelessWidget {
             ),
             const SizedBox(),
           ],
-
         ),
       ),
     );
