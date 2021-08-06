@@ -15,25 +15,37 @@ class TimerBattleScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const RotationTransition(
-                    turns:  AlwaysStoppedAnimation(180 / 360),
-                    child: Text('Start'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                    ),
+                    onPressed: () {},
+                    child: const RotationTransition(
+                      turns:  AlwaysStoppedAnimation(180 / 360),
+                      child: Text('Start'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const RotationTransition(
-                    turns: AlwaysStoppedAnimation(180 / 360),
-                    child: Text('Stop'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const RotationTransition(
+                      turns: AlwaysStoppedAnimation(180 / 360),
+                      child: Text('Stop'),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const RotationTransition(
-                    turns: AlwaysStoppedAnimation(180 / 360),
-                    child: Text('Reset'),
+                SizedBox(
+                  width: size.width / 4,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const RotationTransition(
+                      turns: AlwaysStoppedAnimation(180 / 360),
+                      child: Text('Reset'),
+                    ),
                   ),
                 ),
               ],
