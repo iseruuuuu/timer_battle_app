@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -14,95 +15,93 @@ abstract class TimerBattleScreenState with _$TimerBattleScreenState {
 }
 
 class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> with LocatorMixin {
-  TimerBattleScreenController({
-    required this.context,
-  }) : super (const TimerBattleScreenState());
+  TimerBattleScreenController({required this.context,}) : super (const TimerBattleScreenState());
 
   final BuildContext context;
-
   bool isStopPressed = true;
   bool isResetPressed = true;
   bool isStartPressed = true;
-
   bool isStopPressed2 = true;
   bool isResetPressed2 = true;
   bool isStartPressed2 = true;
+  final dul = const Duration(microseconds: 1);
+  final dul2 = const Duration(milliseconds: 1);
+  var swatch = Stopwatch();
+  var swatch2 = Stopwatch();
+  String player = '00:00:00';
+  String player2 = '00:00:00';
 
-  final dul = const Duration(seconds: 1);
-
-  @override
-  void initState() {
-    super.initState();
-
+  startTimer(){
+    Timer(dul,keepRunning);
   }
+  startTimer2() {
+    Timer(dul2,keepRunning2);
+  }
+
+  keepRunning(){
+    if(swatch.isRunning){
+      startTimer();
+    }
+    player = swatch.elapsed.inSeconds.toString().padLeft(2,"0") +':'
+        + (swatch.elapsed.inMilliseconds % 100).toString().padLeft(2,"0") +':'
+        + (swatch.elapsed.inMicroseconds % 100).toString().padLeft(2,"0") ;
+    state = state.copyWith(
+      player1: player,
+    );
+  }
+
+  keepRunning2(){
+    if(swatch2.isRunning){
+      startTimer2();
+    }
+    player = swatch2.elapsed.inSeconds.toString().padLeft(2,"0") +':'
+        + (swatch2.elapsed.inMilliseconds % 100).toString().padLeft(2,"0") +':'
+        + (swatch2.elapsed.inMicroseconds % 100).toString().padLeft(2,"0") ;
+    state = state.copyWith(
+      player2: player,
+    );
+  }
+
 
   void onTapStart1() {
     isStopPressed = false;
     isStartPressed = true;
-
-    //TODO 1秒を常に増やす。
-
-    //TODO それをstateで渡してあげる。
-    state = state.copyWith(
-      player1: 'スタート',
-    );
+    swatch.start();
+    startTimer();
   }
 
   void onTapStart2() {
     isStopPressed2 = false;
     isStartPressed2 = true;
-
-    //TODO 1秒を常に増やす。
-
-    //TODO それをstateで渡してあげる。
-    state = state.copyWith(
-      player2: 'スタート',
-    );
+    swatch2.start();
+    startTimer2();
   }
 
   void onTapStop1() {
     isStopPressed = true;
     isResetPressed = false;
-
-    //TODO 秒数を止める。
-
-    //TODO それをstateで渡してあげる。
-    state = state.copyWith(
-      player1: 'ストップ',
-    );
+    swatch.stop();
   }
 
   void onTapStop2() {
     isStopPressed2 = true;
     isResetPressed2 = false;
-
-    //TODO 秒数を止める。
-
-    //TODO それをstateで渡してあげる。
-    state = state.copyWith(
-      player2: 'ストップ',
-    );
+    swatch2.stop();
   }
 
   void onTapReset1() {
     isResetPressed = true;
     isStartPressed = true;
-
-    //TODO 秒数を０にする。
-
-    //TODO それをstateで渡してあげる。
+    swatch.reset();
     state = state.copyWith(
       player1: '00:00:00',
     );
-
   }
 
   void onTapReset2() {
     isResetPressed2 = true;
     isStartPressed2 = true;
-
-    //TODO 秒数を０にする。
-    //TODO それをstateで渡してあげる。
+    swatch2.reset();
     state = state.copyWith(
       player2: '00:00:00',
     );
