@@ -30,7 +30,6 @@ class TitleScreenController extends StateNotifier<TitleScreenState> with Locator
   }
 
   void onTapOtherAPP() async{
-   //TODO 別の画面遷移
    String _url = 'https://apps.apple.com/jp/developer/ryutaro-iseki/id1544199624#see-all/i-phone-apps';
    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
   }
