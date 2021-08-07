@@ -16,10 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TimerBattleScreenStateTearOff {
   const _$TimerBattleScreenStateTearOff();
 
-  _TimerBattleScreenState call({String LineID = '', String TwiterID = ''}) {
+  _TimerBattleScreenState call({int player1 = 0, int player2 = 0}) {
     return _TimerBattleScreenState(
-      LineID: LineID,
-      TwiterID: TwiterID,
+      player1: player1,
+      player2: player2,
     );
   }
 }
@@ -29,8 +29,8 @@ const $TimerBattleScreenState = _$TimerBattleScreenStateTearOff();
 
 /// @nodoc
 mixin _$TimerBattleScreenState {
-  String get LineID => throw _privateConstructorUsedError;
-  String get TwiterID => throw _privateConstructorUsedError;
+  int get player1 => throw _privateConstructorUsedError;
+  int get player2 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TimerBattleScreenStateCopyWith<TimerBattleScreenState> get copyWith =>
@@ -42,7 +42,7 @@ abstract class $TimerBattleScreenStateCopyWith<$Res> {
   factory $TimerBattleScreenStateCopyWith(TimerBattleScreenState value,
           $Res Function(TimerBattleScreenState) then) =
       _$TimerBattleScreenStateCopyWithImpl<$Res>;
-  $Res call({String LineID, String TwiterID});
+  $Res call({int player1, int player2});
 }
 
 /// @nodoc
@@ -56,18 +56,18 @@ class _$TimerBattleScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? LineID = freezed,
-    Object? TwiterID = freezed,
+    Object? player1 = freezed,
+    Object? player2 = freezed,
   }) {
     return _then(_value.copyWith(
-      LineID: LineID == freezed
-          ? _value.LineID
-          : LineID // ignore: cast_nullable_to_non_nullable
-              as String,
-      TwiterID: TwiterID == freezed
-          ? _value.TwiterID
-          : TwiterID // ignore: cast_nullable_to_non_nullable
-              as String,
+      player1: player1 == freezed
+          ? _value.player1
+          : player1 // ignore: cast_nullable_to_non_nullable
+              as int,
+      player2: player2 == freezed
+          ? _value.player2
+          : player2 // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -79,7 +79,7 @@ abstract class _$TimerBattleScreenStateCopyWith<$Res>
           $Res Function(_TimerBattleScreenState) then) =
       __$TimerBattleScreenStateCopyWithImpl<$Res>;
   @override
-  $Res call({String LineID, String TwiterID});
+  $Res call({int player1, int player2});
 }
 
 /// @nodoc
@@ -95,18 +95,18 @@ class __$TimerBattleScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? LineID = freezed,
-    Object? TwiterID = freezed,
+    Object? player1 = freezed,
+    Object? player2 = freezed,
   }) {
     return _then(_TimerBattleScreenState(
-      LineID: LineID == freezed
-          ? _value.LineID
-          : LineID // ignore: cast_nullable_to_non_nullable
-              as String,
-      TwiterID: TwiterID == freezed
-          ? _value.TwiterID
-          : TwiterID // ignore: cast_nullable_to_non_nullable
-              as String,
+      player1: player1 == freezed
+          ? _value.player1
+          : player1 // ignore: cast_nullable_to_non_nullable
+              as int,
+      player2: player2 == freezed
+          ? _value.player2
+          : player2 // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -114,36 +114,36 @@ class __$TimerBattleScreenStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TimerBattleScreenState implements _TimerBattleScreenState {
-  const _$_TimerBattleScreenState({this.LineID = '', this.TwiterID = ''});
+  const _$_TimerBattleScreenState({this.player1 = 0, this.player2 = 0});
 
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: 0)
   @override
-  final String LineID;
-  @JsonKey(defaultValue: '')
+  final int player1;
+  @JsonKey(defaultValue: 0)
   @override
-  final String TwiterID;
+  final int player2;
 
   @override
   String toString() {
-    return 'TimerBattleScreenState(LineID: $LineID, TwiterID: $TwiterID)';
+    return 'TimerBattleScreenState(player1: $player1, player2: $player2)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TimerBattleScreenState &&
-            (identical(other.LineID, LineID) ||
-                const DeepCollectionEquality().equals(other.LineID, LineID)) &&
-            (identical(other.TwiterID, TwiterID) ||
+            (identical(other.player1, player1) ||
                 const DeepCollectionEquality()
-                    .equals(other.TwiterID, TwiterID)));
+                    .equals(other.player1, player1)) &&
+            (identical(other.player2, player2) ||
+                const DeepCollectionEquality().equals(other.player2, player2)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(LineID) ^
-      const DeepCollectionEquality().hash(TwiterID);
+      const DeepCollectionEquality().hash(player1) ^
+      const DeepCollectionEquality().hash(player2);
 
   @JsonKey(ignore: true)
   @override
@@ -153,13 +153,13 @@ class _$_TimerBattleScreenState implements _TimerBattleScreenState {
 }
 
 abstract class _TimerBattleScreenState implements TimerBattleScreenState {
-  const factory _TimerBattleScreenState({String LineID, String TwiterID}) =
+  const factory _TimerBattleScreenState({int player1, int player2}) =
       _$_TimerBattleScreenState;
 
   @override
-  String get LineID => throw _privateConstructorUsedError;
+  int get player1 => throw _privateConstructorUsedError;
   @override
-  String get TwiterID => throw _privateConstructorUsedError;
+  int get player2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TimerBattleScreenStateCopyWith<_TimerBattleScreenState> get copyWith =>

@@ -8,8 +8,8 @@ part 'timer_battle_screen_state.freezed.dart';
 @freezed
 abstract class TimerBattleScreenState with _$TimerBattleScreenState {
   const factory TimerBattleScreenState({
-    @Default('') String LineID,
-    @Default('') String TwiterID,
+    @Default(0) int player1,
+    @Default(0) int player2,
   }) = _TimerBattleScreenState;
 }
 
