@@ -50,6 +50,8 @@ dev_dependencies:
   state_notifier:
   build_runner:
 
+  url_launcher:
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
