@@ -23,7 +23,13 @@ class TitleScreen extends StatelessWidget {
                     fontSize: size.width / 13,
                   ),
                 ),
-
+               const SizedBox(height: 10),
+                Text(
+                  '10秒ジャスト',
+                  style: TextStyle(
+                    fontSize: size.width / 20,
+                  ),
+                ),
                 const Spacer(),
                 SizedBox(
                   width: size.width / 1.5,
