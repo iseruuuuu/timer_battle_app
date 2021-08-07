@@ -26,7 +26,27 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
 
   }
 
-  void preference() {
+  void onTapStart1() {
+
+  }
+
+  void onTapStart2() {
+
+  }
+
+  void onTapStop1() {
+
+  }
+
+  void onTapStop2() {
+
+  }
+
+  void onTapReset1() {
+
+  }
+
+  void onTapReset2() {
 
   }
 
