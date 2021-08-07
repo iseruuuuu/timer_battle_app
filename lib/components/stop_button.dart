@@ -19,14 +19,11 @@ class StopButton extends StatelessWidget {
           primary: Colors.redAccent,
         ),
         onPressed: onTap,
-        child: const RotationTransition(
-          turns: AlwaysStoppedAnimation(180 / 360),
-          child: Text(
-            'Stop',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
+        child: const Text(
+          'Stop',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
           ),
         ),
       ),

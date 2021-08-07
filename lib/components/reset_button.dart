@@ -19,14 +19,11 @@ class ResetButton extends StatelessWidget {
           primary: Colors.redAccent,
         ),
         onPressed: onTap,
-        child: const RotationTransition(
-          turns: AlwaysStoppedAnimation(180 / 360),
-          child: Text(
-            'Reset',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
+        child: const Text(
+          'Reset',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
           ),
         ),
       ),

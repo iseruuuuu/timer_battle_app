@@ -18,9 +18,21 @@ class TimerBattleScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                StartButton(onTap: () {},),
-                ResetButton(onTap: () {},),
-                StopButton(onTap: () {},),
+                RotationTransition(
+                  turns: const AlwaysStoppedAnimation(180 / 360),
+                  child: StartButton(onTap: () {},
+                  ),
+                ),
+                RotationTransition(
+                  turns: const AlwaysStoppedAnimation(180 / 360),
+                  child: ResetButton(onTap: () {},
+                  ),
+                ),
+                RotationTransition(
+                  turns: const AlwaysStoppedAnimation(180 / 360),
+                  child: StopButton(onTap: () {},
+                  ),
+                ),
               ],
             ),
             RotationTransition(
@@ -43,57 +55,9 @@ class TimerBattleScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Start',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child:  const Text(
-                      'Stop',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: size.width / 4,
-                  height: size.width / 8,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.redAccent,
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Reset',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
+                StartButton(onTap: () {},),
+                ResetButton(onTap: () {},),
+                StopButton(onTap: () {},),
               ],
             ),
             const SizedBox(),

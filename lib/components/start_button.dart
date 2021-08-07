@@ -19,14 +19,11 @@ class StartButton extends StatelessWidget {
           primary: Colors.redAccent,
         ),
         onPressed: onTap,
-        child: const RotationTransition(
-          turns: AlwaysStoppedAnimation(180 / 360),
-          child: Text(
-            'Start',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
+        child: const Text(
+          'Start',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
           ),
         ),
       ),
