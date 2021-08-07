@@ -14,14 +14,53 @@ class TitleScreen extends StatelessWidget {
       builder: (context, _) {
         return Scaffold(
           body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               const Text('Timer Battle'),
-                ElevatedButton(
-                  onPressed: () => context.read<TitleScreenController>().onTapGame(),
-                  child: const Text('Game Start'),
+                const Spacer(),
+                Text(
+                    '10 Second Stop Watch',
+                  style: TextStyle(
+                    fontSize: size.width / 13,
+                  ),
                 ),
+
+                const Spacer(),
+                SizedBox(
+                  width: size.width / 1.5,
+                  height: size.width / 6,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.indigo,
+                      shape: const StadiumBorder(),
+                    ),
+                    onPressed: () => context.read<TitleScreenController>().onTapGame(),
+                    child: const Text(
+                      'Game Start',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 40),
+                SizedBox(
+                  width: size.width / 1.5,
+                  height: size.width / 6,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                      shape: const StadiumBorder(),
+                    ),
+                    onPressed: () => context.read<TitleScreenController>().onTapGame(),
+                    child: const Text(
+                      'Other Apps',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ),
+                const Spacer(),
               ],
             ),
           ),

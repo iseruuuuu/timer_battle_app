@@ -28,4 +28,8 @@ class TitleScreenController extends StateNotifier<TitleScreenState> with Locator
     );
   }
 
+  void onTapOtherAPP() {
+   //TODO 別の画面遷移
+  }
+
 }
