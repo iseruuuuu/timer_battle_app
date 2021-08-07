@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TimerBattleScreenStateTearOff {
   const _$TimerBattleScreenStateTearOff();
 
-  _TimerBattleScreenState call({int player1 = 0, int player2 = 0}) {
+  _TimerBattleScreenState call({String player1 = '', String player2 = ''}) {
     return _TimerBattleScreenState(
       player1: player1,
       player2: player2,
@@ -29,8 +29,8 @@ const $TimerBattleScreenState = _$TimerBattleScreenStateTearOff();
 
 /// @nodoc
 mixin _$TimerBattleScreenState {
-  int get player1 => throw _privateConstructorUsedError;
-  int get player2 => throw _privateConstructorUsedError;
+  String get player1 => throw _privateConstructorUsedError;
+  String get player2 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TimerBattleScreenStateCopyWith<TimerBattleScreenState> get copyWith =>
@@ -42,7 +42,7 @@ abstract class $TimerBattleScreenStateCopyWith<$Res> {
   factory $TimerBattleScreenStateCopyWith(TimerBattleScreenState value,
           $Res Function(TimerBattleScreenState) then) =
       _$TimerBattleScreenStateCopyWithImpl<$Res>;
-  $Res call({int player1, int player2});
+  $Res call({String player1, String player2});
 }
 
 /// @nodoc
@@ -63,11 +63,11 @@ class _$TimerBattleScreenStateCopyWithImpl<$Res>
       player1: player1 == freezed
           ? _value.player1
           : player1 // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       player2: player2 == freezed
           ? _value.player2
           : player2 // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -79,7 +79,7 @@ abstract class _$TimerBattleScreenStateCopyWith<$Res>
           $Res Function(_TimerBattleScreenState) then) =
       __$TimerBattleScreenStateCopyWithImpl<$Res>;
   @override
-  $Res call({int player1, int player2});
+  $Res call({String player1, String player2});
 }
 
 /// @nodoc
@@ -102,11 +102,11 @@ class __$TimerBattleScreenStateCopyWithImpl<$Res>
       player1: player1 == freezed
           ? _value.player1
           : player1 // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       player2: player2 == freezed
           ? _value.player2
           : player2 // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -114,14 +114,14 @@ class __$TimerBattleScreenStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TimerBattleScreenState implements _TimerBattleScreenState {
-  const _$_TimerBattleScreenState({this.player1 = 0, this.player2 = 0});
+  const _$_TimerBattleScreenState({this.player1 = '', this.player2 = ''});
 
-  @JsonKey(defaultValue: 0)
+  @JsonKey(defaultValue: '')
   @override
-  final int player1;
-  @JsonKey(defaultValue: 0)
+  final String player1;
+  @JsonKey(defaultValue: '')
   @override
-  final int player2;
+  final String player2;
 
   @override
   String toString() {
@@ -153,13 +153,13 @@ class _$_TimerBattleScreenState implements _TimerBattleScreenState {
 }
 
 abstract class _TimerBattleScreenState implements TimerBattleScreenState {
-  const factory _TimerBattleScreenState({int player1, int player2}) =
+  const factory _TimerBattleScreenState({String player1, String player2}) =
       _$_TimerBattleScreenState;
 
   @override
-  int get player1 => throw _privateConstructorUsedError;
+  String get player1 => throw _privateConstructorUsedError;
   @override
-  int get player2 => throw _privateConstructorUsedError;
+  String get player2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TimerBattleScreenStateCopyWith<_TimerBattleScreenState> get copyWith =>

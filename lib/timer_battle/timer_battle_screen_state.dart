@@ -8,8 +8,8 @@ part 'timer_battle_screen_state.freezed.dart';
 @freezed
 abstract class TimerBattleScreenState with _$TimerBattleScreenState {
   const factory TimerBattleScreenState({
-    @Default(0) int player1,
-    @Default(0) int player2,
+    @Default('') String player1,
+    @Default('') String player2,
   }) = _TimerBattleScreenState;
 }
 
@@ -39,32 +39,56 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
   void onTapStart1() {
     isStopPressed = false;
     isStartPressed = true;
+
+    //TODO 1秒を常に増やす。
+
+    //TODO それをstateで渡してあげる。
   }
 
   void onTapStart2() {
     isStopPressed2 = false;
     isStartPressed2 = true;
 
+    //TODO 1秒を常に増やす。
+
+    //TODO それをstateで渡してあげる。
+
   }
 
   void onTapStop1() {
     isStopPressed = true;
     isResetPressed = false;
+
+    //TODO 秒数を止める。
+
+    //TODO それをstateで渡してあげる。
   }
 
   void onTapStop2() {
     isStopPressed2 = true;
     isResetPressed2 = false;
+
+    //TODO 秒数を止める。
+
+    //TODO それをstateで渡してあげる。
   }
 
   void onTapReset1() {
     isResetPressed = true;
     isStartPressed = true;
+
+    //TODO 秒数を０にする。
+
+    //TODO それをstateで渡してあげる。
   }
 
   void onTapReset2() {
     isResetPressed2 = true;
     isStartPressed2 = true;
+
+    //TODO 秒数を０にする。
+
+    //TODO それをstateで渡してあげる。
   }
 
 }
