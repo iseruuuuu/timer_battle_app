@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
+import 'package:timer_battle_app/timer_battle/timer_battle_screen.dart';
 
 part 'title_screen_state.freezed.dart';
 
@@ -17,5 +18,14 @@ class TitleScreenController extends StateNotifier<TitleScreenState> with Locator
   TitleScreenController({required this.context,}) : super (const TitleScreenState());
 
   final BuildContext context;
+
+  void onTapGame() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const TimerBattleScreen(),
+      ),
+    );
+  }
 
 }

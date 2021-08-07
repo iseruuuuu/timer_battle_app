@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/src/provider.dart';
 import 'package:timer_battle_app/title/title_screen_state.dart';
 
 class TitleScreen extends StatelessWidget {
@@ -17,7 +17,11 @@ class TitleScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-
+               const Text('Timer Battle'),
+                ElevatedButton(
+                  onPressed: () => context.read<TitleScreenController>().onTapGame(),
+                  child: const Text('Game Start'),
+                ),
               ],
             ),
           ),

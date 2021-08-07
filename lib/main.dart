@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timer_battle_app/timer_battle/timer_battle_screen.dart';
+import 'package:timer_battle_app/title/title_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TimerBattleScreen(),
+      home: const TitleScreen(),
     );
   }
 }
