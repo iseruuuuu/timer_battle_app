@@ -20,6 +20,16 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
 
   final BuildContext context;
 
+  bool isStopPressed = true;
+  bool isResetPressed = true;
+  bool isStartPressed = true;
+
+  bool isStopPressed2 = true;
+  bool isResetPressed2 = true;
+  bool isStartPressed2 = true;
+
+  final dul = const Duration(seconds: 1);
+
   @override
   void initState() {
     super.initState();
@@ -27,27 +37,34 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
   }
 
   void onTapStart1() {
-
+    isStopPressed = false;
+    isStartPressed = true;
   }
 
   void onTapStart2() {
+    isStopPressed2 = false;
+    isStartPressed2 = true;
 
   }
 
   void onTapStop1() {
-
+    isStopPressed = true;
+    isResetPressed = false;
   }
 
   void onTapStop2() {
-
+    isStopPressed2 = true;
+    isResetPressed2 = false;
   }
 
   void onTapReset1() {
-
+    isResetPressed = true;
+    isStartPressed = true;
   }
 
   void onTapReset2() {
-
+    isResetPressed2 = true;
+    isStartPressed2 = true;
   }
 
 }
