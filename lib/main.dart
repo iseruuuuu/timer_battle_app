@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:timer_battle_app/timer_battle/timer_battle_screen.dart';
 import 'package:timer_battle_app/title/title_screen.dart';
 
 void main() {
