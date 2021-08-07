@@ -16,7 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TimerBattleScreenStateTearOff {
   const _$TimerBattleScreenStateTearOff();
 
-  _TimerBattleScreenState call({String player1 = '', String player2 = ''}) {
+  _TimerBattleScreenState call(
+      {String player1 = '00:00:00', String player2 = '00:00:00'}) {
     return _TimerBattleScreenState(
       player1: player1,
       player2: player2,
@@ -114,12 +115,13 @@ class __$TimerBattleScreenStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TimerBattleScreenState implements _TimerBattleScreenState {
-  const _$_TimerBattleScreenState({this.player1 = '', this.player2 = ''});
+  const _$_TimerBattleScreenState(
+      {this.player1 = '00:00:00', this.player2 = '00:00:00'});
 
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: '00:00:00')
   @override
   final String player1;
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: '00:00:00')
   @override
   final String player2;
 

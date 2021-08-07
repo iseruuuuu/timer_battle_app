@@ -15,6 +15,8 @@ class TimerBattleScreen extends StatelessWidget {
     return StateNotifierProvider<TimerBattleScreenController, TimerBattleScreenState>(
       create: (context) => TimerBattleScreenController(context: context),
       builder: (context, _) {
+        final Player1 = context.select<TimerBattleScreenState, String>((state) => state.player1);
+        final Player2 = context.select<TimerBattleScreenState, String>((state) => state.player2);
         return Scaffold(
           body: Center(
             child: Column(
@@ -47,7 +49,7 @@ class TimerBattleScreen extends StatelessWidget {
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(180 / 360),
                   child: Text(
-                    '00:00:00',
+                    Player1,
                     style: TextStyle(
                       fontSize: size.width / 7,
                       color: Colors.black,
@@ -55,7 +57,7 @@ class TimerBattleScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '00:00:00',
+                  Player2,
                   style: TextStyle(
                     fontSize: size.width / 7,
                     color: Colors.black,
@@ -68,10 +70,10 @@ class TimerBattleScreen extends StatelessWidget {
                       onTap: () => context.read<TimerBattleScreenController>().onTapStart2(),
                     ),
                     ResetButton(
-                      onTap: () => context.read<TimerBattleScreenController>().onTapStop2(),
+                      onTap: () => context.read<TimerBattleScreenController>().onTapReset2(),
                     ),
                     StopButton(
-                      onTap: () => context.read<TimerBattleScreenController>().onTapReset2(),
+                      onTap: () => context.read<TimerBattleScreenController>().onTapStop2(),
                     ),
                   ],
                 ),

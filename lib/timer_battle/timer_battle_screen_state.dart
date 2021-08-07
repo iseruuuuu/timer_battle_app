@@ -8,8 +8,8 @@ part 'timer_battle_screen_state.freezed.dart';
 @freezed
 abstract class TimerBattleScreenState with _$TimerBattleScreenState {
   const factory TimerBattleScreenState({
-    @Default('') String player1,
-    @Default('') String player2,
+    @Default('00:00:00') String player1,
+    @Default('00:00:00') String player2,
   }) = _TimerBattleScreenState;
 }
 
@@ -43,6 +43,9 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     //TODO 1秒を常に増やす。
 
     //TODO それをstateで渡してあげる。
+    state = state.copyWith(
+      player1: 'スタート',
+    );
   }
 
   void onTapStart2() {
@@ -52,7 +55,9 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     //TODO 1秒を常に増やす。
 
     //TODO それをstateで渡してあげる。
-
+    state = state.copyWith(
+      player2: 'スタート',
+    );
   }
 
   void onTapStop1() {
@@ -62,6 +67,9 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     //TODO 秒数を止める。
 
     //TODO それをstateで渡してあげる。
+    state = state.copyWith(
+      player1: 'ストップ',
+    );
   }
 
   void onTapStop2() {
@@ -71,6 +79,9 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     //TODO 秒数を止める。
 
     //TODO それをstateで渡してあげる。
+    state = state.copyWith(
+      player2: 'ストップ',
+    );
   }
 
   void onTapReset1() {
@@ -80,6 +91,10 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     //TODO 秒数を０にする。
 
     //TODO それをstateで渡してあげる。
+    state = state.copyWith(
+      player1: '00:00:00',
+    );
+
   }
 
   void onTapReset2() {
@@ -87,8 +102,10 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     isStartPressed2 = true;
 
     //TODO 秒数を０にする。
-
     //TODO それをstateで渡してあげる。
+    state = state.copyWith(
+      player2: '00:00:00',
+    );
   }
 
 }
