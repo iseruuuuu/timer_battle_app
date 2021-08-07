@@ -56,7 +56,7 @@ class TimerBattleScreenController extends StateNotifier<TimerBattleScreenState> 
     }
     player = swatch2.elapsed.inSeconds.toString().padLeft(2,"0") +':'
         + (swatch2.elapsed.inMilliseconds % 100).toString().padLeft(2,"0") +':'
-        + (swatch2.elapsed.inMicroseconds % 100).toString().padLeft(2,"0") ;
+        + (swatch2.elapsed.inMicroseconds % 100).toString().padLeft(2,"0");
     state = state.copyWith(
       player2: player,
     );
